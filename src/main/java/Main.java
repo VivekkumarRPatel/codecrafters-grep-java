@@ -45,7 +45,7 @@ public class Main {
       }
 
     return false;
-    }else if(patttern.startsWith("[") && patttern.startsWith("]") && pattern.length()>2 ){
+    }else if(pattern.startsWith("[") && pattern.startsWith("]") && pattern.length()>2 ){
       String subStr=pattern.substring(1,pattern.length()-1);
       return inputLine.chars().anyMatch(ch->subStr.indexOf(ch)>=0);
     }
