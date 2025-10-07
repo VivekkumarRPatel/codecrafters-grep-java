@@ -29,6 +29,22 @@ public class Main {
       return inputLine.contains(pattern);
     } else if (pattern.equals("\\d")){
       return inputLine.chars().anyMatch(Character::isDigit);
+    }else if (pattern.equals("\\w")){
+
+      char ch[]=inputLine.toCharArray();
+      int len=ch.length;
+
+      for(int index=0;index<len;index++){
+
+        if( (ch[index]>='A' &&  ch[index]<='Z') ||
+            (ch[index]>='a' &&  ch[index]<='z') || 
+            (ch[index]>='0' &&  ch[index]<='9')){
+              continue:
+        }else{
+          return false;
+        }
+
+      }
     }
     else {
       throw new RuntimeException("Unhandled pattern: " + pattern);
