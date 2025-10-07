@@ -40,13 +40,11 @@ public class Main {
             (ch[index]>='a' &&  ch[index]<='z') || 
             (ch[index]>='0' &&  ch[index]<='9') ||
             ch[index]=='_'){
-              continue;
-        }else{
-          return false;
+              return true;
         }
       }
 
-    return true;
+    return false;
     }
     else {
       throw new RuntimeException("Unhandled pattern: " + pattern);
