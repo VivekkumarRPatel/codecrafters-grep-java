@@ -50,7 +50,7 @@ public class Main {
       return inputLine.chars().anyMatch(ch->subStr.indexOf(ch)>=0);
     }else if(pattern.startsWith("[") && pattern.endsWith("]") && pattern.length()>=3 && pattern.charAt(1)=='^'){
 
-      String subStr=pattern.substring(1,pattern.length()-1);
+      String subStr=pattern.substring(2,pattern.length()-1);
       return inputLine.chars().noneMatch(ch->pattern.indexOf(ch)>=0);
     }
     else {
