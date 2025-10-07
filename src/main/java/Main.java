@@ -43,8 +43,9 @@ public class Main {
         }else{
           return false;
         }
-
       }
+
+    return true;
     }
     else {
       throw new RuntimeException("Unhandled pattern: " + pattern);
