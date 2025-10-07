@@ -50,7 +50,7 @@ public class Main {
       if(subStr.startsWith("^")){
          return inputLine.chars().anyMatch(ch->subStr.indexOf(ch)<0);
       }
-      return inputLine.chars().anyMatch(ch->subStr.subString(1).indexOf(ch)>=0);
+      return inputLine.chars().anyMatch(ch->subStr.substring(1).indexOf(ch)>=0);
     }
     else {
       throw new RuntimeException("Unhandled pattern: " + pattern);
