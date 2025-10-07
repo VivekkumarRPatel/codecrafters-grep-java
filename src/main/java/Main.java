@@ -39,7 +39,7 @@ public class Main {
         if( (ch[index]>='A' &&  ch[index]<='Z') ||
             (ch[index]>='a' &&  ch[index]<='z') || 
             (ch[index]>='0' &&  ch[index]<='9')){
-              continue:
+              continue;
         }else{
           return false;
         }
